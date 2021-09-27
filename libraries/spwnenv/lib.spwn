@@ -1,0 +1,6 @@
+process = (s: @string) {
+    return s.split('\n').map((s: @string) => s.trim().split('=').map((s: @string) => s.trim()))
+}
+
+// process them
+return process($.readfile("../../.env"))
